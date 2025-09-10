@@ -14,6 +14,17 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <title>Simulados</title>
+  <link rel="manifest" href="manifest.json" />
+<link rel="icon" href="image.png" type="image/png" />
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("sw.js")
+        .then(() => console.log("Service Worker registrado"))
+        .catch((err) => console.error("SW erro:", err));
+    }
+  </script>
     <style>
       body {
         background-color: rgb(32, 46, 65);
